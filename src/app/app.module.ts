@@ -29,6 +29,8 @@ import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 
+import { HighlightDirective } from './directives/highlight.directive';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
@@ -50,6 +52,7 @@ import { baseURL } from './shared/baseurl';
     HomeComponent,
     ContactComponent,
     LoginComponent,
+    HighlightDirective,
   ],
   imports: [
     AppRoutingModule,
