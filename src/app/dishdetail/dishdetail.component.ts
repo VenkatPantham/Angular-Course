@@ -97,9 +97,10 @@ export class DishdetailComponent implements OnInit {
       comment: ['', [Validators.required]],
     });
 
-    this.commentForm.valueChanges.subscribe((data) =>
-      this.onValueChanged(data)
-    );
+    this.commentForm.valueChanges.subscribe({
+      next: (data) => this.onValueChanged(data),
+      error: (errmess) => (this.errMess = errmess),
+    });
 
     this.onValueChanged(); // (re)set validation messages now
   }
